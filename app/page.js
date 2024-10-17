@@ -13,6 +13,7 @@ export default function Home() {
         <meta name="description" content="Created using Next.js and Tailwind CSS" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="vlrtK2yO_eMOhtO0QfLtjKiVjWVchA71KwZCcF5ukck" />
       </Head>
 
       <div className="bg-gray-50 dark:bg-gray-900 min-h-full">
