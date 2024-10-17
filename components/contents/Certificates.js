@@ -3,7 +3,7 @@ import Certificate from "./Certificate";
 
 const Certificates = () => {
   return (
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 w-full">
       <Certificate src="/certs/moa.jpg" alt="MOA" />
       <Certificate src="/certs/alibaba.jpg" alt="Alibaba" />
       <Certificate src="/certs/thm.png" alt="Tryhackme Room" />

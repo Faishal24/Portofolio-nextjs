@@ -15,7 +15,7 @@ const Project = ({ title, tech, purpose, feature, url, tag }) => {
       </div>
 
       {isLoading && (
-        <div class="w-full h-44 rounded-md my-3 bg-gray-400 dark:bg-gray-200 animate-pulse"></div>
+        <div className="w-full h-44 rounded-md my-3 bg-gray-400 dark:bg-gray-200 animate-pulse"></div>
       )}
       <Image
         src={url}

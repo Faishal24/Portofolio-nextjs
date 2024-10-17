@@ -24,7 +24,7 @@ const Body = () => {
   };
 
   return (
-    <section className="pt-2 sm:pt-7">
+    <main role="main" className="pt-2 sm:pt-7">
       <div id="tab">
         <ul className="max-w-full grid grid-flow-col items-center auto-cols-[1fr]">
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
@@ -122,7 +122,7 @@ const Body = () => {
           {renderScreen()}
         </motion.div>
       </AnimatePresence>
-    </section>
+    </main>
   );
 };
 
