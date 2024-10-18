@@ -1,4 +1,4 @@
-export const baseUrl = "https://faishal-portofolio.vercel.app/";
+export const baseUrl = "https://www.faishal24.my.id/";
 
 export default async function sitemap() {
   const routes = [""].map((route) => ({

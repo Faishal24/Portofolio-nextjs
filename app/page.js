@@ -27,7 +27,7 @@ export default function Home() {
           content="Created using Next.js and Tailwind CSS"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://faishal-portofolio.vercel.app/" />
+        <meta property="og:url" content="https://www.faishal24.my.id/" />
       </Head>
 
       <div className="bg-gray-50 dark:bg-gray-900 min-h-full">
