@@ -29,13 +29,13 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: { google: "vlrtK2yO_eMOhtO0QfLtjKiVjWVchA71KwZCcF5ukck" },
+  verification: { google: "UZumOKjgwFZuN5L6Y0f8urkUI_PzwlOBJm7eb2rD-tk" },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-WKDWF8GV" />
+      
       <body className="font-sans antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
