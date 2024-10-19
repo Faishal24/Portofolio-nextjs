@@ -20,12 +20,12 @@ const About = () => {
           <li>
             Web Development <span className="text-gray-600 dark:text-gray-400 text-sm">•</span>{" "}
             <span className="text-emerald-600 dark:text-green-400 font-semibold">
-              Reactjs, Nodejs, Expressjs, MongoDB, Tailwind, Bootstrap.
+              React.js, Node.js, Express.js, MongoDB, Tailwind, DaisyUI, Bootstrap.
             </span>
           </li>
           <li>
             Mobile Development <span className="text-gray-600 dark:text-gray-400 text-sm">•</span>{" "}
-            <span className="text-blue-600 dark:text-sky-400 font-semibold">React Native</span>
+            <span className="text-blue-600 dark:text-sky-400 font-semibold">React Native, Flutter</span>
           </li>
         </ul>
       </span>
