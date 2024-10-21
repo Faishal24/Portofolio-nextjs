@@ -4,7 +4,7 @@ import { SiTryhackme } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer role="footer">
+    <footer>
       <div className="flex flex-row gap-6 justify-center pt-3">
         <a href="https://github.com/Faishal24" target="_blank" aria-label="Github link">
           <FaGithub className="text-gray-800 dark:text-gray-200 text-2xl transition transform hover:scale-125 duration-0"/>

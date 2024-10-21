@@ -8,7 +8,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <section role="hero" className="px-3 sm:px-6 bg-gray-50 dark:bg-gray-900">
+    <section className="px-3 sm:px-6 bg-gray-50 dark:bg-gray-900">
       <div className="flex justify-between">
         {isLoading && (
           <div className="h-36 w-36 sm:h-40 sm:w-40 rounded-full border-4 border-gray-50 dark:border-gray-900 -mt-[4.5rem] sm:-mt-20 bg-gray-200"></div>
