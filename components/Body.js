@@ -28,7 +28,7 @@ const Body = () => {
       <div id="tab">
         <ul className="max-w-full grid grid-flow-col items-center auto-cols-[1fr]">
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <a
+            <button
               onClick={() => setTab("Posts")}
               className={`font-bold ${
                 tab == "Posts"
@@ -45,10 +45,10 @@ const Body = () => {
               >
                 Posts
               </span>
-            </a>
+            </button>
           </li>
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <a
+            <button
               onClick={() => setTab("About")}
               className={`font-bold ${
                 tab == "About"
@@ -65,10 +65,10 @@ const Body = () => {
               >
                 About
               </span>
-            </a>
+            </button>
           </li>
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <a
+            <button
               onClick={() => setTab("Projects")}
               className={`font-bold ${
                 tab == "Projects"
@@ -85,10 +85,10 @@ const Body = () => {
               >
                 Projects
               </span>
-            </a>
+            </button>
           </li>
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <a
+            <button
               onClick={() => setTab("Certificates")}
               className={`font-bold ${
                 tab == "Certificates"
@@ -105,7 +105,7 @@ const Body = () => {
               >
                 Certs
               </span>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
