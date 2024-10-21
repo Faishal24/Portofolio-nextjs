@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Posts from "./contents/Posts";
@@ -112,11 +112,11 @@ const Body = () => {
 
       <AnimatePresence mode="wait">
         <motion.div
-          key={tab} // Add a unique key to trigger the animation on tab change
-          initial={{ opacity: 0, y: -10 }} // Start state (hidden)
-          animate={{ opacity: 1, y: 0 }} // End state (visible)
-          exit={{ opacity: 0, y: 10 }} // Exit animation (hidden)
-          transition={{ duration: 0.1 }} // Animation duration
+          key={tab}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.1 }}
           className="content"
         >
           {renderScreen()}
