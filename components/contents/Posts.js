@@ -9,7 +9,7 @@ const Posts = () => {
         caption="Thrilled to announce the completion of my Task Management project,
           featuring both web and mobile applications! 🚀📱🌐 It’s been an
           incredible journey developing tools to help streamline productivity
-          and organization. Check it out and let me know your thoughts!"
+          and organization"
         image="/posts/post1.png"
       />
       <Post
@@ -22,7 +22,7 @@ const Posts = () => {
         date="25 December 2022"
         caption="Proud to have completed the Advent of Cyber 2022 challenge on
           TryHackMe! 🎉🔐 It was an exciting and educational experience diving
-          into the world of cybersecurity. Ready to tackle new challenges ahead!"
+          into the world of cybersecurity."
         image="/certs/thm.png"
       />
     </div>
