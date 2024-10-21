@@ -21,6 +21,7 @@ const Hero = () => {
           height={144}
           width={144}
           unoptimized
+          priority
         />
         <a
           href="https://x.com/DuapatSan"

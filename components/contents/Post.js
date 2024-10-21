@@ -41,6 +41,8 @@ const Post = ({ date, caption, image }) => {
         onLoad={() => setIsLoading(false)}
         height={56}
         width={56}
+        unoptimized
+        priority
       />
 
       <div>
