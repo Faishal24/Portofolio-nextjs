@@ -29,7 +29,7 @@ const Body = () => {
   return (
     <main role="main" className="pt-2 sm:pt-7">
       <div id="tab">
-        <ul className="max-w-full grid grid-flow-col items-center auto-cols-[1fr]">
+        <ul className="max-w-full grid grid-flow-col items-center auto-cols-auto sm:auto-cols-[1fr]">
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
             <a
               onClick={() => setTab("Posts")}
@@ -42,8 +42,8 @@ const Body = () => {
               <span
                 className={
                   tab == "Posts"
-                    ? "p-2 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
-                    : "p-2 sm:px-5 select-none duration-0"
+                    ? "p-1 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
+                    : "p-1 sm:px-5 select-none duration-0"
                 }
               >
                 Posts
@@ -62,8 +62,8 @@ const Body = () => {
               <span
                 className={
                   tab == "About"
-                    ? "p-2 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
-                    : "p-2 sm:px-5 select-none duration-0"
+                    ? "p-1 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
+                    : "p-1 sm:px-5 select-none duration-0"
                 }
               >
                 About
@@ -82,8 +82,8 @@ const Body = () => {
               <span
                 className={
                   tab == "Projects"
-                    ? "p-2 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
-                    : "p-2 sm:px-5 select-none duration-0"
+                    ? "p-1 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
+                    : "p-1 sm:px-5 select-none duration-0"
                 }
               >
                 Projects
@@ -102,8 +102,8 @@ const Body = () => {
               <span
                 className={
                   tab == "Certificates"
-                    ? "p-2 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
-                    : "p-2 sm:px-5 select-none duration-0"
+                    ? "p-1 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
+                    : "p-1 sm:px-5 select-none duration-0"
                 }
               >
                 Certs
@@ -122,11 +122,11 @@ const Body = () => {
               <span
                 className={
                   tab == "Comment"
-                    ? "p-2 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
-                    : "p-2 sm:px-5 select-none duration-0"
+                    ? "p-1 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
+                    : "p-1 sm:px-5 select-none duration-0"
                 }
               >
-                Thoughts
+                Comments
               </span>
             </a>
           </li>
