@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -14,18 +14,20 @@ const Certificate = ({ src, alt, link }) => {
       )}
 
       <a href={link}>
-        <Image
-          src={src}
-          alt={alt}
-          className={`border border-gray-900 dark:border-none object-cover h-full w-full rounded-md transition transform hover:scale-105 ${
-            isLoading ? "hidden" : "block"
-          }`}
-          onLoad={() => setIsLoading(false)}
-          height={144}
-          width={256}
-          priority
-          unoptimized
-        />
+        <div className="object-cover h-full w-full overflow-hidden rounded-lg">
+          <Image
+            src={src}
+            alt={alt}
+            className={`border border-gray-900 dark:border-none object-cover h-full w-full relative z-0 rounded-lg transition-all duration-300 hover:scale-110 ${
+              isLoading ? "hidden" : "block"
+            }`}
+            onLoad={() => setIsLoading(false)}
+            height={144}
+            width={256}
+            priority
+            unoptimized
+          />
+        </div>
       </a>
     </div>
   );
