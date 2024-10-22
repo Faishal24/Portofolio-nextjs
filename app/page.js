@@ -59,8 +59,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.faishal24.my.id/" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64" />
         <link rel="canonical" href="https://www.faishal24.my.id/" />
       </Head>
 
