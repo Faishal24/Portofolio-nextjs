@@ -1,7 +1,7 @@
 "use client"; // Pastikan Anda menggunakan ini untuk interaksi dengan browser
 
 import { useState, useEffect } from "react";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { generateRandomCombination, formatDate } from "@/utils/utils";
 import Image from "next/image";
@@ -11,16 +11,30 @@ const Comment = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [submitLoading, setSubmitLoading] = useState(false);
 
-  const fetchComments = async () => {
-    const querySnapshot = await getDocs(collection(db, "comments"));
-    const commentsArray = querySnapshot.docs.map((doc) => doc.data());
-    setComments(commentsArray);
-    setLoading(false);
+  const fetchComments = () => {
+    const q = query(collection(db, "comments"), orderBy("createdAt", "desc"));
+
+    // Subscribe ke collection comments
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const commentsArray = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+  
+      // Update state dengan data terbaru
+      setComments(commentsArray);
+      setLoading(false);
+    });
+  
+    // kembalikan fungsi unsubscribe untuk menghentikan listener jika diperlukan
+    return () => unsubscribe();
   };
 
   useEffect(() => {
-    fetchComments();
+    const unsubscribe = fetchComments();
+    return () => unsubscribe();  // Clean up listener saat komponen unmount
   }, []);
 
   const handleSubmit = async (e) => {
@@ -28,7 +42,9 @@ const Comment = () => {
     e.preventDefault();
     if (name && comment) {
       // Add comment to Firestore
+      setSubmitLoading(true);
       await addDoc(collection(db, "comments"), {
+        id: comments.length + 1,
         name: name,
         comment: comment,
         avatar: combination,
@@ -37,6 +53,7 @@ const Comment = () => {
       setName("");
       setComment("");
       fetchComments();
+      setSubmitLoading(false);
     }
   };
 
@@ -69,11 +86,11 @@ const Comment = () => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg"
         >
-          Submit Comment
+          {submitLoading ? <span className="loading loading-spinner loading-md"></span> : "Submit Comment"}
         </button>
       </form>
 
-      <div className="mt-1">
+      <div className="mt-3">
         <h3 className="text-xl text-gray-800 dark:text-gray-200 font-semibold mb-2">
           Other people's thoughts:
         </h3>
@@ -82,11 +99,12 @@ const Comment = () => {
             <div
               key={index}
               className="border border-slate-400 dark:border-slate-600 p-2 bg-slate-100 dark:bg-slate-800 rounded-lg"
+              onClick={() => console.log(comments)}
             >
               <div className="flex">
                 <Image
                   className="w-14 h-14 rounded-full border-4 dark:border-gray-900"
-                  src={`https://robohash.org/${com.avatar}.png?set=set4`}
+                  src={`https://robohash.org/${com.avatar}.png?set=set4`} // Generated using robohash.org
                   alt="icon"
                   height={36}
                   width={36}
