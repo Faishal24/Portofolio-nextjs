@@ -86,7 +86,7 @@ const Comment = () => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg"
         >
-          {submitLoading ? <span className="loading loading-spinner loading-md"></span> : "Submit Comment"}
+          {submitLoading ? <span className="loading loading-spinner loading-md"></span> : "Send Comment"}
         </button>
       </form>
 
