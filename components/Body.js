@@ -5,6 +5,7 @@ import Posts from "./contents/Posts";
 import About from "./contents/About";
 import Projects from "./contents/Projects";
 import Certificates from "./contents/Certificates";
+import Comment from "./contents/Comment";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Body = () => {
@@ -20,6 +21,8 @@ const Body = () => {
         return <Projects />;
       case "Certificates":
         return <Certificates />;
+      case "Comment":
+        return <Comment />
     }
   };
 
@@ -28,7 +31,7 @@ const Body = () => {
       <div id="tab">
         <ul className="max-w-full grid grid-flow-col items-center auto-cols-[1fr]">
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <button
+            <a
               onClick={() => setTab("Posts")}
               className={`font-bold ${
                 tab == "Posts"
@@ -45,10 +48,10 @@ const Body = () => {
               >
                 Posts
               </span>
-            </button>
+            </a>
           </li>
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <button
+            <a
               onClick={() => setTab("About")}
               className={`font-bold ${
                 tab == "About"
@@ -65,10 +68,10 @@ const Body = () => {
               >
                 About
               </span>
-            </button>
+            </a>
           </li>
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <button
+            <a
               onClick={() => setTab("Projects")}
               className={`font-bold ${
                 tab == "Projects"
@@ -85,10 +88,10 @@ const Body = () => {
               >
                 Projects
               </span>
-            </button>
+            </a>
           </li>
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
-            <button
+            <a
               onClick={() => setTab("Certificates")}
               className={`font-bold ${
                 tab == "Certificates"
@@ -105,7 +108,27 @@ const Body = () => {
               >
                 Certs
               </span>
-            </button>
+            </a>
+          </li>
+          <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
+            <a
+              onClick={() => setTab("Comment")}
+              className={`font-bold ${
+                tab == "Comment"
+                  ? "text-gray-800 dark:text-gray-200"
+                  : "text-gray-600 dark:text-gray-400"
+              } grid place-items-center`}
+            >
+              <span
+                className={
+                  tab == "Comment"
+                    ? "p-2 sm:px-5 select-none border-y-4 border-transparent border-b-sky-800 dark:border-b-sky-200 transition-none duration-0"
+                    : "p-2 sm:px-5 select-none duration-0"
+                }
+              >
+                Thoughts
+              </span>
+            </a>
           </li>
         </ul>
       </div>
