@@ -42,7 +42,7 @@ export default function Home() {
         <title>Faishal's Portofolio</title>
         <meta
           name="description"
-          content="Created using Next.js and Tailwind CSS"
+          content="Saya memiliki keahlian dalam menciptakan antarmuka pengguna yang responsif dan menarik. Saya berpengalaman dalam menggunakan teknologi modern seperti HTML, CSS, dan JavaScript, serta framework seperti React dan Tailwind CSS."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -53,11 +53,14 @@ export default function Home() {
         <meta property="og:title" content="Faishal's Portofolio" />
         <meta
           property="og:description"
-          content="Created using Next.js and Tailwind CSS"
+          content="Saya memiliki keahlian dalam menciptakan antarmuka pengguna yang responsif dan menarik. Saya berpengalaman dalam menggunakan teknologi modern seperti HTML, CSS, dan JavaScript, serta framework seperti React dan Tailwind CSS."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.faishal24.my.id/" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
         <link rel="canonical" href="https://www.faishal24.my.id/" />
       </Head>
 
