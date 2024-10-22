@@ -8,7 +8,7 @@ const Project = ({ title, tech, purpose, feature, url, tag }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="p-4 sm:p-6 gap-2 bg-gray-200 dark:bg-gray-800 rounded-lg ">
+    <div className="p-4 sm:p-6 gap-2 bg-gray-200 dark:bg-gray-800 rounded-lg text-sm sm:text-base">
       <div className="flex justify-between">
         <h2 className="font-bold text-xl text-gray-800 dark:text-gray-200">{title}</h2>
         <Tag text={tag} />

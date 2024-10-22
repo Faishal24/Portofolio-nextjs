@@ -33,7 +33,7 @@ const Body = () => {
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
             <a
               onClick={() => setTab("Posts")}
-              className={`font-bold ${
+              className={`text-sm sm:text-base font-bold ${
                 tab == "Posts"
                   ? "text-gray-800 dark:text-gray-200"
                   : "text-gray-600 dark:text-gray-400"
@@ -53,7 +53,7 @@ const Body = () => {
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
             <a
               onClick={() => setTab("About")}
-              className={`font-bold ${
+              className={`text-sm sm:text-base font-bold ${
                 tab == "About"
                   ? "text-gray-800 dark:text-gray-200"
                   : "text-gray-600 dark:text-gray-400"
@@ -73,7 +73,7 @@ const Body = () => {
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
             <a
               onClick={() => setTab("Projects")}
-              className={`font-bold ${
+              className={`text-sm sm:text-base font-bold ${
                 tab == "Projects"
                   ? "text-gray-800 dark:text-gray-200"
                   : "text-gray-600 dark:text-gray-400"
@@ -93,7 +93,7 @@ const Body = () => {
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
             <a
               onClick={() => setTab("Certificates")}
-              className={`font-bold ${
+              className={`text-sm sm:text-base font-bold ${
                 tab == "Certificates"
                   ? "text-gray-800 dark:text-gray-200"
                   : "text-gray-600 dark:text-gray-400"
@@ -113,7 +113,7 @@ const Body = () => {
           <li className="flex-grow hover:bg-gray-300 dark:hover:bg-gray-800">
             <a
               onClick={() => setTab("Comment")}
-              className={`font-bold ${
+              className={`text-sm sm:text-base font-bold ${
                 tab == "Comment"
                   ? "text-gray-800 dark:text-gray-200"
                   : "text-gray-600 dark:text-gray-400"

@@ -56,7 +56,7 @@ const Post = ({ date, caption, image }) => {
         </div>
 
         {/* Content */}
-        <p className="text-gray-800 dark:text-gray-200 text-justify">
+        <p className="text-gray-800 dark:text-gray-200 text-justify text-sm sm:text-base">
           {caption}
         </p>
 

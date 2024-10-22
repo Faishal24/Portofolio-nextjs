@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="px-3 py-3 sm:py-9 sm:px-6 flex flex-col gap-4">
+    <div className="px-3 py-3 sm:py-9 sm:px-6 flex flex-col gap-4 text-sm sm:text-base">
       <p className="text-gray-800 dark:text-gray-200 text-justify">
         Hi, I'm Faishal Hakim! I'm a Full-Stack Developer, Cybersecurity
         Enthusiast with a passion for creating innovative solutions and

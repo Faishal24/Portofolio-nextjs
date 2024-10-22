@@ -41,7 +41,7 @@ const Comment = () => {
   };
 
   return (
-    <div className="px-3 py-3 sm:py-9 md:px-6 flex flex-col gap-4">
+    <div className="px-3 py-3 sm:py-9 md:px-6 flex flex-col gap-4 text-sm sm:text-base">
       <div>
         <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
           We Want to Hear Your Opinions!
@@ -73,7 +73,7 @@ const Comment = () => {
         </button>
       </form>
 
-      <div className="mt-6">
+      <div className="mt-1">
         <h3 className="text-xl text-gray-800 dark:text-gray-200 font-semibold mb-2">
           Other people's thoughts:
         </h3>
