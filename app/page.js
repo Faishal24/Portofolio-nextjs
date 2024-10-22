@@ -40,24 +40,25 @@ export default function Home() {
     <>
       <Head>
         <title>Faishal's Portofolio</title>
-        <meta name="description" content="Created using Next.js and Tailwind CSS" />
+        <meta
+          name="description"
+          content="Created using Next.js and Tailwind CSS"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="google-site-verification" content="vlrtK2yO_eMOhtO0QfLtjKiVjWVchA71KwZCcF5ukck" />
         <meta
-          name="keywords"
-          content="portofolio, nextjs portofolio"
+          name="google-site-verification"
+          content="vlrtK2yO_eMOhtO0QfLtjKiVjWVchA71KwZCcF5ukck"
         />
-        <meta
-          property="og:title"
-          content="Faishal's Portofolio"
-        />
+        <meta name="keywords" content="portofolio, nextjs portofolio" />
+        <meta property="og:title" content="Faishal's Portofolio" />
         <meta
           property="og:description"
           content="Created using Next.js and Tailwind CSS"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.faishal24.my.id/" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://www.faishal24.my.id/" />
       </Head>
 
       <div className="bg-gray-50 dark:bg-gray-900 min-h-full">
