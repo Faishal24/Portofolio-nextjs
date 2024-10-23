@@ -1,7 +1,14 @@
 "use client"; // Pastikan Anda menggunakan ini untuk interaksi dengan browser
 
 import { useState, useEffect } from "react";
-import { collection, addDoc, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy,
+  onSnapshot,
+} from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { generateRandomCombination, formatDate } from "@/utils/utils";
 import Image from "next/image";
@@ -22,19 +29,19 @@ const Comment = () => {
         id: doc.id,
         ...doc.data(),
       }));
-  
+
       // Update state dengan data terbaru
       setComments(commentsArray);
       setLoading(false);
     });
-  
+
     // kembalikan fungsi unsubscribe untuk menghentikan listener jika diperlukan
     return () => unsubscribe();
   };
 
   useEffect(() => {
     const unsubscribe = fetchComments();
-    return () => unsubscribe();  // Clean up listener saat komponen unmount
+    return () => unsubscribe(); // Clean up listener saat komponen unmount
   }, []);
 
   const handleSubmit = async (e) => {
@@ -86,7 +93,11 @@ const Comment = () => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg"
         >
-          {submitLoading ? <span className="loading loading-spinner loading-md"></span> : "Send Comment"}
+          {submitLoading ? (
+            <span className="loading loading-spinner loading-md"></span>
+          ) : (
+            "Send Comment"
+          )}
         </button>
       </form>
 
@@ -137,7 +148,7 @@ const Comment = () => {
               {Array.from({ length: 2 }).map((_, index) => (
                 <div
                   key={index}
-                  className="border border-gray-200 dark:border-gray-900 p-2 bg-white dark:bg-gray-800 rounded-lg animate-pulse"
+                  className="border border-slate-400 dark:border-slate-600 p-2 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse"
                 >
                   <div className="flex">
                     <div className="rounded-full bg-gray-200 w-14 h-14"></div>
