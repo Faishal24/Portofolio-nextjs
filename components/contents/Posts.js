@@ -6,10 +6,10 @@ const Posts = () => {
     <div className="sm:py-4 flex flex-col gap-4">
       <Post
         date="25 June 2024"
-        caption="Thrilled to announce the completion of my Task Management project,
+        caption="Finally I finished my Task Management project,
           featuring both web and mobile applications! 🚀📱🌐 It’s been an
           incredible journey developing tools to help streamline productivity
-          and organization"
+          and organization."
         image="/posts/post1.png"
       />
       <Post
