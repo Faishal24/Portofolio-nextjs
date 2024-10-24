@@ -25,7 +25,7 @@ const Hero = () => {
         />
         <a
           href="https://x.com/DuapatSan"
-          className="bg-sky-900 dark:bg-sky-100 text-sky-100 dark:text-sky-800 font-bold px-4 py-2 rounded-full h-10 flex items-center gap-2 mt-3"
+          className="bg-sky-900 dark:bg-sky-200 text-sky-200 dark:text-sky-800 font-bold px-4 py-2 rounded-full h-10 flex items-center gap-2 mt-3"
         >
           Follow
           <FaTwitter className="text-xl text-sky-100 dark:text-sky-800 duration-0" />

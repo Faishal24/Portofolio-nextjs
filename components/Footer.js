@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaGithub, FaMedium, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaGithub, FaGitlab , FaMedium, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { SiTryhackme } from "react-icons/si";
 
 const Footer = () => {
@@ -7,22 +7,25 @@ const Footer = () => {
     <footer>
       <div className="flex flex-row gap-6 justify-center pt-3">
         <a href="https://github.com/Faishal24" target="_blank" aria-label="Github link">
-          <FaGithub className="text-gray-800 dark:text-gray-200 text-2xl transition transform hover:scale-125 duration-0"/>
+          <FaGithub className="text-gray-800 dark:text-gray-200 text-2xl transition-all transform hover:scale-125 durationduration-1000"/>
+        </a>
+        <a href="https://gitlab.com/Faishal241" target="_blank" aria-label="Gitlab link">
+          <FaGitlab className="text-gray-800 dark:text-gray-200 text-2xl transition-all transform hover:scale-125 duration-100" />
         </a>
         <a href="https://www.linkedin.com/in/faishal-hakim-62b849257/" target="_blank" aria-label="Linkedin link">
-          <FaLinkedin className="text-gray-800 dark:text-gray-200 text-2xl transition transform hover:scale-125 duration-0" />
+          <FaLinkedin className="text-gray-800 dark:text-gray-200 text-2xl transition-all transform hover:scale-125 duration-100" />
         </a>
         <a href="https://www.instagram.com/milanta169/" target="_blank" aria-label="Instagram link">
-          <FaInstagram className="text-gray-800 dark:text-gray-200 text-2xl transition transform hover:scale-125 duration-0" />
+          <FaInstagram className="text-gray-800 dark:text-gray-200 text-2xl transition-all transform hover:scale-125 duration-100" />
         </a>
         <a href="https://medium.com/@Faishal24" target="_blank" aria-label="Medium link">
-          <FaMedium className="text-gray-800 dark:text-gray-200 text-2xl transition transform hover:scale-125 duration-0" />
+          <FaMedium className="text-gray-800 dark:text-gray-200 text-2xl transition-all transform hover:scale-125 duration-100" />
         </a>
         <a href="https://x.com/DuapatSan" target="_blank" aria-label="Twitter link">
-          <FaXTwitter className="text-gray-800 dark:text-gray-200 text-xl transition transform hover:scale-125 duration-0" />
+          <FaXTwitter className="text-gray-800 dark:text-gray-200 text-xl transition-all transform hover:scale-125 duration-100" />
         </a>
         <a href="https://tryhackme.com/p/GodongIjo" target="_blank" aria-label="Tryhackme link">
-          <SiTryhackme className="text-gray-800 dark:text-gray-200 text-2xl transition transform hover:scale-125 duration-0" />
+          <SiTryhackme className="text-gray-800 dark:text-gray-200 text-2xl transition-all transform hover:scale-125 duration-100" />
         </a>
       </div>
       <p className="text-gray-600 dark:text-gray-400 text-sm text-center pb-5 pt-3">

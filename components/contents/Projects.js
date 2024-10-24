@@ -6,7 +6,7 @@ const Projects = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 w-full">
       <Project
         title="Cooperative Finance"
-        tech="ReactJS, React Native"
+        tech="ReactJS, React Native, DaisyUI"
         purpose="-"
         feature="-"
         url="/projects/project8.png"
@@ -15,7 +15,7 @@ const Projects = () => {
 
       <Project
         title="Task Management"
-        tech="ReactJS, React Native, ExpressJS, MongoDB"
+        tech="ReactJS, React Native, ExpressJS, MongoDB, Ant Design, MagnusUI"
         purpose="Enable workers to manage their tasks on the go, enhancing productivity and ensuring timely completion."
         feature="Progress tracking."
         url="/projects/project1.png"
@@ -24,7 +24,7 @@ const Projects = () => {
       
       <Project
         title="Notes App"
-        tech="NextJS, Clerk"
+        tech="NextJS, Clerk, TailwindCSS, MongoDB"
         purpose="Write notes, save links, and organize your thoughts in one place."
         feature="Real-time updates, archive notes."
         url="/projects/project7.png"
@@ -33,8 +33,8 @@ const Projects = () => {
 
       <Project
         title="Attendance App"
-        tech="ReactJS, React Native, ExpressJS, MongoDB"
-        purpose="Enable workers to manage their tasks on the go, enhancing productivity and ensuring timely completion."
+        tech="ReactJS, React Native, ExpressJS, MongoDB, TailwindCSS"
+        purpose="Allow workers to mark attendance using QR Code."
         feature="Mark attendance using QR Code"
         url="/projects/project2.png"
         tag="Web Mobile"
