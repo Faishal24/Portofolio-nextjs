@@ -1,10 +1,14 @@
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
+import { baseUrl } from "./sitemap";
 import Banner from "@/components/Banner";
-import Hero from "@/components/Hero";
 import Body from "@/components/Body";
 import Footer from "@/components/Footer";
-import { baseUrl } from "./sitemap";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+
+// Toast
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -74,6 +78,19 @@ export default function Home() {
             <Footer />
           </div>
         </div>
+
+        <ToastContainer
+          position="bottom-right"
+          autoClose={3000}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition="Bounce"
+        />
       </div>
     </>
   );

@@ -12,6 +12,7 @@ import {
 import { db } from "@/lib/firebase";
 import { generateRandomCombination, formatDate } from "@/utils/utils";
 import Image from "next/image";
+import { toast } from "react-toastify";
 
 const Comment = () => {
   const [name, setName] = useState("");
@@ -47,7 +48,9 @@ const Comment = () => {
   const handleSubmit = async (e) => {
     const combination = generateRandomCombination();
     e.preventDefault();
-    if (name && comment) {
+    if (name == "" || comment == "") {
+      notify();
+    } else {
       // Add comment to Firestore
       setSubmitLoading(true);
       await addDoc(collection(db, "comments"), {
@@ -63,6 +66,8 @@ const Comment = () => {
       setSubmitLoading(false);
     }
   };
+
+  const notify = () => toast.error("Please fill in all required fields.");
 
   return (
     <div className="px-3 py-3 sm:py-9 md:px-6 flex flex-col gap-4 text-sm sm:text-base">
@@ -98,6 +103,10 @@ const Comment = () => {
           ) : (
             "Send Comment"
           )}
+        </button>
+
+        <button className="btn" onClick={notify}>
+          Notify
         </button>
       </form>
 
@@ -145,7 +154,7 @@ const Comment = () => {
 
           {isLoading && (
             <>
-              {Array.from({ length: 2 }).map((_, index) => (
+              {Array.from({ length: 3 }).map((_, index) => (
                 <div
                   key={index}
                   className="border border-slate-400 dark:border-slate-600 p-2 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse"
