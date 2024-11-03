@@ -49,7 +49,7 @@ const Comment = () => {
     const combination = generateRandomCombination();
     e.preventDefault();
     if (name == "" || comment == "") {
-      notify();
+      notify("error");
     } else {
       // Add comment to Firestore
       setSubmitLoading(true);
@@ -60,6 +60,7 @@ const Comment = () => {
         avatar: combination,
         createdAt: new Date(),
       });
+      notify("success");
       setName("");
       setComment("");
       fetchComments();
@@ -67,8 +68,15 @@ const Comment = () => {
     }
   };
 
-  const notify = () => {
-    toast.error("Please fill in all required fields.");
+  const notify = (type) => {
+    switch (type) {
+      case "success":
+        toast.success("Send Comment Success!");
+        break;
+      case "error":
+        toast.error("Please fill in all required fields.");
+        break;
+    }
   };
 
   return (
