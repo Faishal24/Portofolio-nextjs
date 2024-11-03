@@ -67,7 +67,9 @@ const Comment = () => {
     }
   };
 
-  const notify = () => toast.error("Please fill in all required fields.");
+  const notify = () => {
+    toast.error("Please fill in all required fields.");
+  };
 
   return (
     <div className="px-3 py-3 sm:py-9 md:px-6 flex flex-col gap-4 text-sm sm:text-base">
@@ -103,10 +105,6 @@ const Comment = () => {
           ) : (
             "Send Comment"
           )}
-        </button>
-
-        <button className="btn" onClick={notify}>
-          Notify
         </button>
       </form>
 

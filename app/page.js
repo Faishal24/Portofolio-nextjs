@@ -6,10 +6,6 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 
-// Toast
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
@@ -79,18 +75,6 @@ export default function Home() {
           </div>
         </div>
 
-        <ToastContainer
-          position="bottom-right"
-          autoClose={3000}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss={false}
-          draggable
-          pauseOnHover
-          theme="colored"
-          transition="Bounce"
-        />
       </div>
     </>
   );
