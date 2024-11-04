@@ -67,7 +67,7 @@ export default function Home() {
         <Navbar />
 
         <div className="flex justify-center">
-          <div id="body" className="w-[50em] pt-14 sm:pt-16 xl:mx-5">
+          <div id="body" className="w-[50em] pt-12 sm:pt-16 xl:mx-5">
             <Banner />
             <Hero />
             <Body />

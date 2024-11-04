@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav
       role="navigation"
-      className="flex justify-between h-14 sm:h-16 items-center w-screen px-5 sm:px-24 z-10 fixed backdrop-blur bg-gray-200/80 dark:bg-gray-900/80"
+      className="flex justify-between h-12 sm:h-16 items-center w-screen px-5 sm:px-24 z-10 fixed backdrop-blur bg-gray-200/80 dark:bg-gray-900/80"
     >
       <a
         href="https://faishal24.my.id/"
@@ -25,6 +25,7 @@ const Navbar = () => {
             height={36}
             width={36}
             priority
+            className="h-[30px] w-[30px] sm:h-[36px] sm:w-[36px]"
           />
         ) : (
           <Image
@@ -33,6 +34,7 @@ const Navbar = () => {
             height={36}
             width={36}
             priority
+            className="h-[30px] w-[30px] sm:h-[36px] sm:w-[36px]"
           />
         )}
       </a>
