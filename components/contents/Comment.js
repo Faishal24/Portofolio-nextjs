@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import {
   collection,
   addDoc,
-  getDocs,
   query,
   orderBy,
   onSnapshot,
@@ -71,7 +70,7 @@ const Comment = () => {
   const notify = (type) => {
     switch (type) {
       case "success":
-        toast.success("Send Comment Success!");
+        toast.success("Comment sent successfully.");
         break;
       case "error":
         toast.error("Please fill in all required fields.");
@@ -109,7 +108,7 @@ const Comment = () => {
           className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg"
         >
           {submitLoading ? (
-            <span className="loading loading-spinner loading-md"></span>
+            "Sumbitting..."
           ) : (
             "Send Comment"
           )}
