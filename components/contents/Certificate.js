@@ -2,9 +2,20 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import ImageModal from "../ImageModal";
 
 const Certificate = ({ src, alt, link }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleImageClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="w-full">
       {isLoading && (
@@ -13,7 +24,6 @@ const Certificate = ({ src, alt, link }) => {
         </div>
       )}
 
-      <a href={link}>
         <div className="object-cover h-full w-full overflow-hidden rounded-lg">
           <Image
             src={src}
@@ -26,9 +36,13 @@ const Certificate = ({ src, alt, link }) => {
             width={256}
             priority
             unoptimized
+            onClick={handleImageClick}
           />
+
+          {showModal && (
+            <ImageModal src={src} alt={alt} onClose={handleCloseModal} link={link}/>
+          )}
         </div>
-      </a>
     </div>
   );
 };
