@@ -12,9 +12,9 @@ const ImageModal = ({ src, alt, onClose, link }) => {
   });
 
   return (
-    <dialog ref={modalRef} id="image_modal" className="modal">
+    <dialog ref={modalRef} id="image_modal" className="modal" data-theme={`${localStorage.getItem("theme") == "light" ? "light" : "dark"}`}>
       <div className="modal-box">
-        <h3 className="font-bold text-lg text-center mb-5">{alt}</h3>
+        <h3 className="font-bold text-lg text-center text-gray-800 dark:text-gray-200 mb-5">{alt}</h3>
         <Image
           src={src}
           alt={alt}
